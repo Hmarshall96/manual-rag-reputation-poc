@@ -28,13 +28,14 @@ The numbered questions, tone, and request structure are identical. This ensures 
 
 ### Context Files for Prompt B
 
-Attach these 5 files (paste their full markdown content before the query):
+Attach these 6 files (paste their full markdown content before the query):
 
 1. `context/case-studies/CS02-uk-csuite-tribunal-coverage.md`
 2. `context/scenarios/S01-executive-resurfaced-negative-article.md`
 3. `context/actions/A01-content-removal-deindexing.md`
 4. `context/how-to/removals/H01-google-rtbf-request.md`
 5. `context/how-to/removals/H02-rtbf-rejection-appeal.md`
+6. `context/how-to/removals/H08-news-archive-removal.md`
 
 ### Prompt A (Baseline — no context)
 
@@ -47,10 +48,12 @@ She is UK-based and all the articles are on UK news sites.
 
 Please provide:
 1. A detailed strategy for transforming her search results, covering both content removal and positive content creation
-2. Specific steps she can take to remove or de-index the news articles and court images
+2. Specific steps she can take to remove or de-index the news articles and court images, including ready-to-use template language for key submissions (e.g. RTBF requests, publisher contact letters)
 3. A realistic timeline and what she should expect at each stage
-4. Any legal routes available to her under UK/EU law
+4. Any legal routes available to her under UK/EU law, including regulatory complaints processes
 5. How to rebuild her personal brand alongside the removal work
+6. An indicative budget range for the overall programme
+7. A prioritised action checklist she can hand to her team to execute immediately
 
 Where possible, reference specific processes, legal frameworks, or real-world examples of how similar situations have been resolved.
 ```
@@ -58,7 +61,7 @@ Where possible, reference specific processes, legal frameworks, or real-world ex
 ### Prompt B (Archive-Assisted — with context files)
 
 ```
-You are a senior reputation management consultant. The documentation attached above contains real case studies with verified client outcomes, step-by-step procedural guides, and strategic frameworks from your firm. Combine these internal materials with your broader knowledge of reputation management, legal frameworks, and industry best practices to produce a well-rounded response. Name the relevant case studies and quote their specific metrics and timelines, follow the documented procedures where applicable, and supplement with external sources such as relevant legislation, regulatory guidance, and established industry methodologies to strengthen your recommendations. A client has come to you with the following situation:
+You are a senior reputation management consultant. The documentation attached above contains real case studies with verified client outcomes, step-by-step procedural guides, and strategic frameworks from your firm. Combine these internal materials with your broader knowledge of reputation management, legal frameworks, and industry best practices to produce a well-rounded response. When referencing an attached document, cite it in square brackets using its ID — for example [CS02], [H01], [A01]. Name the relevant case studies and quote their specific metrics and timelines, follow the documented procedures where applicable, and supplement with external sources such as relevant legislation, regulatory guidance, and established industry methodologies to strengthen your recommendations. A client has come to you with the following situation:
 
 She is a former CFO of a UK retail company who was involved in an employment tribunal 3 years ago. National newspapers (The Guardian, Daily Mail, BBC) covered the case extensively. When her name is Googled, 9 out of 10 results on Page 1 are negative articles about the tribunal. Google Images is dominated by court attendance photos from press libraries like Alamy and Shutterstock. She wants to pursue Non-Executive Director roles but boards are seeing only the tribunal coverage when they search her name.
 
@@ -66,10 +69,12 @@ She is UK-based and all the articles are on UK news sites.
 
 Please provide:
 1. A detailed strategy for transforming her search results, covering both content removal and positive content creation
-2. Specific steps she can take to remove or de-index the news articles and court images
+2. Specific steps she can take to remove or de-index the news articles and court images, including ready-to-use template language for key submissions (e.g. RTBF requests, publisher contact letters)
 3. A realistic timeline and what she should expect at each stage
-4. Any legal routes available to her under UK/EU law
+4. Any legal routes available to her under UK/EU law, including regulatory complaints processes
 5. How to rebuild her personal brand alongside the removal work
+6. An indicative budget range for the overall programme
+7. A prioritised action checklist she can hand to her team to execute immediately
 
 Where possible, reference specific processes, legal frameworks, or real-world examples of how similar situations have been resolved.
 ```
@@ -82,6 +87,9 @@ The archive-assisted response should organically surface:
 - Image removal from press libraries (Alamy, Shutterstock) as a separate workstream
 - A realistic timeline grounded in precedent rather than a vague estimate
 - The personal brand rebuild playbook (NED website + LinkedIn + media interviews + podcasts)
+- The IPSO complaints process as a regulatory route for UK press (from H08 — not mentioned in the prompt)
+- Ready-to-use template language for RTBF submissions and publisher contact letters
+- Budget range grounded in documented pricing (£3,000–£15,000 typical for removals)
 
 ---
 
@@ -116,11 +124,13 @@ In the 48 hours since news broke:
 
 Please provide:
 1. An immediate action plan for the next 24 hours
-2. A holding statement the CEO can use with media right now
-3. A social media response strategy
+2. A ready-to-use holding statement the CEO can issue to media right now
+3. A social media response strategy, including template responses for common comment types
 4. A plan for the next 30 days to stabilise the situation
 5. A 6-12 month reputation recovery strategy
 6. How to handle the Trustpilot review bombing
+7. An indicative budget range for the crisis response and recovery programme
+8. A prioritised action checklist the CEO can hand to their team today
 
 Where possible, reference specific frameworks, real-world examples, or proven crisis communication approaches.
 ```
@@ -128,7 +138,7 @@ Where possible, reference specific frameworks, real-world examples, or proven cr
 ### Prompt B (Archive-Assisted — with context files)
 
 ```
-You are a crisis communications and reputation management consultant. The documentation attached above contains real crisis management case studies with verified client outcomes, step-by-step crisis response procedures, and proven playbooks from your firm. Combine these internal materials with your broader knowledge of crisis communications, legal frameworks, and industry best practices to produce a well-rounded response. Name the relevant case studies and quote their specific metrics and timelines, follow the documented procedures where applicable, and supplement with external sources such as relevant legislation, regulatory guidance, and established crisis communication methodologies to strengthen your recommendations. A restaurant chain CEO has called you in a state of emergency with the following situation:
+You are a crisis communications and reputation management consultant. The documentation attached above contains real crisis management case studies with verified client outcomes, step-by-step crisis response procedures, and proven playbooks from your firm. Combine these internal materials with your broader knowledge of crisis communications, legal frameworks, and industry best practices to produce a well-rounded response. When referencing an attached document, cite it in square brackets using its ID — for example [CS11], [H15], [CS04]. Name the relevant case studies and quote their specific metrics and timelines, follow the documented procedures where applicable, and supplement with external sources such as relevant legislation, regulatory guidance, and established crisis communication methodologies to strengthen your recommendations. A restaurant chain CEO has called you in a state of emergency with the following situation:
 
 Their flagship Manchester restaurant has had a food poisoning outbreak. 15 customers have been hospitalised. Local TV news (BBC North West, ITV Granada) has covered it. The story is trending on Twitter/X in Manchester. The local council's environmental health team is investigating. The company has 12 locations across Northern England.
 
@@ -141,11 +151,13 @@ In the 48 hours since news broke:
 
 Please provide:
 1. An immediate action plan for the next 24 hours
-2. A holding statement the CEO can use with media right now
-3. A social media response strategy
+2. A ready-to-use holding statement the CEO can issue to media right now
+3. A social media response strategy, including template responses for common comment types
 4. A plan for the next 30 days to stabilise the situation
 5. A 6-12 month reputation recovery strategy
 6. How to handle the Trustpilot review bombing
+7. An indicative budget range for the crisis response and recovery programme
+8. A prioritised action checklist the CEO can hand to their team today
 
 Where possible, reference specific frameworks, real-world examples, or proven crisis communication approaches.
 ```
@@ -192,11 +204,13 @@ When their company name is Googled, 8 of the top 20 results on Google Pages 1-2 
 The forum posts contain factual inaccuracies and defamatory claims. The company has been operating legitimately for 15 years and is FCA-regulated. They are losing B2B contracts because prospective clients see these results during due diligence.
 
 Please provide:
-1. A strategy for removing or suppressing the negative forum content
+1. A strategy for removing or suppressing the negative forum content, including ready-to-use template language for forum removal requests and legal notices
 2. Specific approaches for each platform (Money Saving Expert, Consumer Action Group, Trustpilot, Rip Off Report, Glassdoor)
 3. A positive content creation plan to push down what can't be removed
 4. How to handle the review situation across platforms
 5. A realistic assessment of what can and cannot be removed
+6. An indicative budget range for the overall programme
+7. A prioritised action checklist the company can begin executing immediately
 
 Where possible, reference specific legal frameworks, platform-specific procedures, or real-world examples.
 ```
@@ -204,7 +218,7 @@ Where possible, reference specific legal frameworks, platform-specific procedure
 ### Prompt B (Archive-Assisted — with context files)
 
 ```
-You are a reputation management consultant. The documentation attached above contains real case studies with verified client outcomes, step-by-step removal procedures, and strategy guides from your firm. Combine these internal materials with your broader knowledge of reputation management, legal frameworks, and industry best practices to produce a well-rounded response. Name the relevant case studies and quote their specific metrics and timelines, follow the documented procedures where applicable, and supplement with external sources such as relevant legislation, regulatory guidance, and established industry methodologies to strengthen your recommendations. A UK debt collection company has approached you with the following problem:
+You are a reputation management consultant. The documentation attached above contains real case studies with verified client outcomes, step-by-step removal procedures, and strategy guides from your firm. Combine these internal materials with your broader knowledge of reputation management, legal frameworks, and industry best practices to produce a well-rounded response. When referencing an attached document, cite it in square brackets using its ID — for example [CS07], [H04], [A01]. Name the relevant case studies and quote their specific metrics and timelines, follow the documented procedures where applicable, and supplement with external sources such as relevant legislation, regulatory guidance, and established industry methodologies to strengthen your recommendations. A UK debt collection company has approached you with the following problem:
 
 When their company name is Googled, 8 of the top 20 results on Google Pages 1-2 are negative. The negative results include:
 - Two threads on Money Saving Expert forums calling the company a "scam"
@@ -216,11 +230,13 @@ When their company name is Googled, 8 of the top 20 results on Google Pages 1-2 
 The forum posts contain factual inaccuracies and defamatory claims. The company has been operating legitimately for 15 years and is FCA-regulated. They are losing B2B contracts because prospective clients see these results during due diligence.
 
 Please provide:
-1. A strategy for removing or suppressing the negative forum content
+1. A strategy for removing or suppressing the negative forum content, including ready-to-use template language for forum removal requests and legal notices
 2. Specific approaches for each platform (Money Saving Expert, Consumer Action Group, Trustpilot, Rip Off Report, Glassdoor)
 3. A positive content creation plan to push down what can't be removed
 4. How to handle the review situation across platforms
 5. A realistic assessment of what can and cannot be removed
+6. An indicative budget range for the overall programme
+7. A prioritised action checklist the company can begin executing immediately
 
 Where possible, reference specific legal frameworks, platform-specific procedures, or real-world examples.
 ```
