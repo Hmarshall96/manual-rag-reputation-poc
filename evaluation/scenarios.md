@@ -58,7 +58,7 @@ Where possible, reference specific processes, legal frameworks, or real-world ex
 ### Prompt B (Archive-Assisted — with context files)
 
 ```
-You are a senior reputation management consultant. The internal documentation, case studies, and procedural guides provided above represent your firm's proven methodologies and real client outcomes. Ground your recommendations in these materials — reference the documented procedures, cite the case studies with their real-world metrics and timelines, and follow the step-by-step processes where applicable. A client has come to you with the following situation:
+You are a senior reputation management consultant. The documentation attached above contains real case studies with verified client outcomes, step-by-step procedural guides, and strategic frameworks from your firm. Combine these internal materials with your broader knowledge of reputation management, legal frameworks, and industry best practices to produce a well-rounded response. Name the relevant case studies and quote their specific metrics and timelines, follow the documented procedures where applicable, and supplement with external sources such as relevant legislation, regulatory guidance, and established industry methodologies to strengthen your recommendations. A client has come to you with the following situation:
 
 She is a former CFO of a UK retail company who was involved in an employment tribunal 3 years ago. National newspapers (The Guardian, Daily Mail, BBC) covered the case extensively. When her name is Googled, 9 out of 10 results on Page 1 are negative articles about the tribunal. Google Images is dominated by court attendance photos from press libraries like Alamy and Shutterstock. She wants to pursue Non-Executive Director roles but boards are seeing only the tribunal coverage when they search her name.
 
@@ -128,7 +128,7 @@ Where possible, reference specific frameworks, real-world examples, or proven cr
 ### Prompt B (Archive-Assisted — with context files)
 
 ```
-You are a crisis communications and reputation management consultant. The internal crisis management procedures, case studies, and playbooks provided above represent your firm's proven methodologies and real client outcomes. Ground your recommendations in these materials — reference the documented procedures, cite the case studies with their real-world metrics and timelines, and follow the step-by-step processes where applicable. A restaurant chain CEO has called you in a state of emergency with the following situation:
+You are a crisis communications and reputation management consultant. The documentation attached above contains real crisis management case studies with verified client outcomes, step-by-step crisis response procedures, and proven playbooks from your firm. Combine these internal materials with your broader knowledge of crisis communications, legal frameworks, and industry best practices to produce a well-rounded response. Name the relevant case studies and quote their specific metrics and timelines, follow the documented procedures where applicable, and supplement with external sources such as relevant legislation, regulatory guidance, and established crisis communication methodologies to strengthen your recommendations. A restaurant chain CEO has called you in a state of emergency with the following situation:
 
 Their flagship Manchester restaurant has had a food poisoning outbreak. 15 customers have been hospitalised. Local TV news (BBC North West, ITV Granada) has covered it. The story is trending on Twitter/X in Manchester. The local council's environmental health team is investigating. The company has 12 locations across Northern England.
 
@@ -204,7 +204,7 @@ Where possible, reference specific legal frameworks, platform-specific procedure
 ### Prompt B (Archive-Assisted — with context files)
 
 ```
-You are a reputation management consultant. The internal case studies, removal procedures, and strategy guides provided above represent your firm's proven methodologies and real client outcomes. Ground your recommendations in these materials — reference the documented procedures, cite the case studies with their real-world metrics and timelines, and follow the step-by-step processes where applicable. A UK debt collection company has approached you with the following problem:
+You are a reputation management consultant. The documentation attached above contains real case studies with verified client outcomes, step-by-step removal procedures, and strategy guides from your firm. Combine these internal materials with your broader knowledge of reputation management, legal frameworks, and industry best practices to produce a well-rounded response. Name the relevant case studies and quote their specific metrics and timelines, follow the documented procedures where applicable, and supplement with external sources such as relevant legislation, regulatory guidance, and established industry methodologies to strengthen your recommendations. A UK debt collection company has approached you with the following problem:
 
 When their company name is Googled, 8 of the top 20 results on Google Pages 1-2 are negative. The negative results include:
 - Two threads on Money Saving Expert forums calling the company a "scam"
