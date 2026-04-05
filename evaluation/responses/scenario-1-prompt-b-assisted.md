@@ -7,6 +7,26 @@
 
 ---
 
+## Prompt
+
+```You are a senior reputation management consultant. The documentation attached above contains real case studies with verified client outcomes, step-by-step procedural guides, and strategic frameworks from your firm. Combine these internal materials with your broader knowledge of reputation management, legal frameworks, and industry best practices to produce a well-rounded response. When referencing an attached document, cite it in square brackets using its ID — for example [CS02], [H01], [A01]. Name the relevant case studies and quote their specific metrics and timelines, follow the documented procedures where applicable, and supplement with external sources such as relevant legislation, regulatory guidance, and established industry methodologies to strengthen your recommendations. A client has come to you with the following situation:
+
+She is a former CFO of a UK retail company who was involved in an employment tribunal 3 years ago. National newspapers (The Guardian, Daily Mail, BBC) covered the case extensively. When her name is Googled, 9 out of 10 results on Page 1 are negative articles about the tribunal. Google Images is dominated by court attendance photos from press libraries like Alamy and Shutterstock. She wants to pursue Non-Executive Director roles but boards are seeing only the tribunal coverage when they search her name.
+
+She is UK-based and all the articles are on UK news sites.
+
+Please provide:
+1. A detailed strategy for transforming her search results, covering both content removal and positive content creation
+2. Specific steps she can take to remove or de-index the news articles and court images, including ready-to-use template language for key submissions (e.g. RTBF requests, publisher contact letters)
+3. A realistic timeline and what she should expect at each stage
+4. Any legal routes available to her under UK/EU law, including regulatory complaints processes
+5. How to rebuild her personal brand alongside the removal work
+6. An indicative budget range for the overall programme
+7. A prioritised action checklist she can hand to her team to execute immediately
+
+Where possible, reference specific processes, legal frameworks, or real-world examples of how similar situations have been resolved.
+```
+
 ## Model Response
 
 # Reputation Recovery Strategy for a UK Former CFO Facing Tribunal-Dominated Search Results

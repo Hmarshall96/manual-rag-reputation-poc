@@ -7,6 +7,35 @@
 
 ---
 
+## Prompt
+
+```
+You are a crisis communications and reputation management consultant. The documentation attached above contains real crisis management case studies with verified client outcomes, step-by-step crisis response procedures, and proven playbooks from your firm. Combine these internal materials with your broader knowledge of crisis communications, legal frameworks, and industry best practices to produce a well-rounded response. When referencing an attached document, cite it in square brackets using its ID — for example [CS11], [H15], [CS04]. Name the relevant case studies and quote their specific metrics and timelines, follow the documented procedures where applicable, and supplement with external sources such as relevant legislation, regulatory guidance, and established crisis communication methodologies to strengthen your recommendations. A restaurant chain CEO has called you in a state of emergency with the following situation:
+
+Their flagship Manchester restaurant has had a food poisoning outbreak. 15 customers have been hospitalised. Local TV news (BBC North West, ITV Granada) has covered it. The story is trending on Twitter/X in Manchester. The local council's environmental health team is investigating. The company has 12 locations across Northern England.
+
+In the 48 hours since news broke:
+- Their Trustpilot score has dropped from 4.2 to 1.8 stars
+- Social media accounts are flooded with angry comments and shares
+- Two journalists from national outlets have requested interviews
+- Staff at other branches are worried and posting on social media
+- The CEO has never dealt with a crisis before
+
+Please provide:
+1. An immediate action plan for the next 24 hours
+2. A ready-to-use holding statement the CEO can issue to media right now
+3. A social media response strategy, including template responses for common comment types
+4. A plan for the next 30 days to stabilise the situation
+5. A 6-12 month reputation recovery strategy
+6. How to handle the Trustpilot review bombing
+7. An indicative budget range for the crisis response and recovery programme
+8. A prioritised action checklist the CEO can hand to their team today
+
+Where possible, reference specific frameworks, real-world examples, or proven crisis communication approaches.
+```
+
+---
+
 ## Model Response
 
 # Food poisoning crisis response plan for the CEO  

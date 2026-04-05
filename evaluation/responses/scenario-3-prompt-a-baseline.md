@@ -7,6 +7,34 @@
 
 ---
 
+## Prompt
+
+```
+You are a reputation management consultant. A UK debt collection company has approached you with the following problem:
+
+When their company name is Googled, 8 of the top 20 results on Google Pages 1-2 are negative. The negative results include:
+- Two threads on Money Saving Expert forums calling the company a "scam"
+- A long thread on Consumer Action Group alleging illegal debt collection practices
+- Multiple 1-star Trustpilot reviews
+- A complaint on Rip Off Report
+- Several negative Glassdoor employee reviews
+
+The forum posts contain factual inaccuracies and defamatory claims. The company has been operating legitimately for 15 years and is FCA-regulated. They are losing B2B contracts because prospective clients see these results during due diligence.
+
+Please provide:
+1. A strategy for removing or suppressing the negative forum content, including ready-to-use template language for forum removal requests and legal notices
+2. Specific approaches for each platform (Money Saving Expert, Consumer Action Group, Trustpilot, Rip Off Report, Glassdoor)
+3. A positive content creation plan to push down what can't be removed
+4. How to handle the review situation across platforms
+5. A realistic assessment of what can and cannot be removed
+6. An indicative budget range for the overall programme
+7. A prioritised action checklist the company can begin executing immediately
+
+Where possible, reference specific legal frameworks, platform-specific procedures, or real-world examples.
+```
+
+---
+
 ## Model Response
 
 # Reputation management plan for a UK debt collection company
