@@ -10,27 +10,22 @@
 ## Prompt
 
 ```
-You are a reputation management consultant. A UK debt collection company has approached you with the following problem:
+You are a senior reputation management consultant. A client has come to you with the following situation:
 
-When their company name is Googled, 8 of the top 20 results on Google Pages 1-2 are negative. The negative results include:
-- Two threads on Money Saving Expert forums calling the company a "scam"
-- A long thread on Consumer Action Group alleging illegal debt collection practices
-- Multiple 1-star Trustpilot reviews
-- A complaint on Rip Off Report
-- Several negative Glassdoor employee reviews
+She is a former CFO of a UK retail company who was involved in an employment tribunal 3 years ago. National newspapers (The Guardian, Daily Mail, BBC) covered the case extensively. When her name is Googled, 9 out of 10 results on Page 1 are negative articles about the tribunal. Google Images is dominated by court attendance photos from press libraries like Alamy and Shutterstock. She wants to pursue Non-Executive Director roles but boards are seeing only the tribunal coverage when they search her name.
 
-The forum posts contain factual inaccuracies and defamatory claims. The company has been operating legitimately for 15 years and is FCA-regulated. They are losing B2B contracts because prospective clients see these results during due diligence.
+She is UK-based and all the articles are on UK news sites.
 
 Please provide:
-1. A strategy for removing or suppressing the negative forum content, including ready-to-use template language for forum removal requests and legal notices
-2. Specific approaches for each platform (Money Saving Expert, Consumer Action Group, Trustpilot, Rip Off Report, Glassdoor)
-3. A positive content creation plan to push down what can't be removed
-4. How to handle the review situation across platforms
-5. A realistic assessment of what can and cannot be removed
+1. A detailed strategy for transforming her search results, covering both content removal and positive content creation
+2. Specific steps she can take to remove or de-index the news articles and court images, including ready-to-use template language for key submissions (e.g. RTBF requests, publisher contact letters)
+3. A realistic timeline and what she should expect at each stage
+4. Any legal routes available to her under UK/EU law, including regulatory complaints processes
+5. How to rebuild her personal brand alongside the removal work
 6. An indicative budget range for the overall programme
-7. A prioritised action checklist the company can begin executing immediately
+7. A prioritised action checklist she can hand to her team to execute immediately
 
-Where possible, reference specific legal frameworks, platform-specific procedures, or real-world examples.
+Where possible, reference specific processes, legal frameworks, or real-world examples of how similar situations have been resolved.
 ```
 
 ---
