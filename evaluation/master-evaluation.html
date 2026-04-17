@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Master Evaluation: Manual RAG Reputation Management PoC</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="-" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Master Evaluation: Manual RAG Reputation Management
+PoC</h1>
+</header>
+<h1 id="master-evaluation-manual-rag-reputation-management-poc">Master
+Evaluation: Manual RAG Reputation Management PoC</h1>
+<h2 id="overview">Overview</h2>
+<p>This document presents the combined results of two independent
+evaluations comparing baseline (Prompt A) and archive-assisted (Prompt
+B) responses across three reputation management scenarios. The
+evaluations used the same scoring criteria but different methods, and
+their scores are presented separately throughout.</p>
+<h3 id="what-was-tested">What was tested</h3>
+<ul>
+<li><strong>Model:</strong> GPT 5.3 Thinking</li>
+<li><strong>Date:</strong> 2026-04-04</li>
+<li><strong>Approach:</strong> For each scenario, the same query was
+sent in two separate conversations — once without context (Prompt A /
+Baseline) and once with relevant internal documents attached (Prompt B /
+Archive-Assisted). The only difference between prompts was a framing
+line asking the model to use the provided context and cite documents by
+ID.</li>
+</ul>
+<h3 id="evaluation-methods">Evaluation methods</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Automated Evaluation</th>
+<th>Human Evaluation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Evaluator</strong></td>
+<td>Claude (LLM-based analysis)</td>
+<td>4 domain experts (Andrew, Ben, Charlie, Jen)</td>
+</tr>
+<tr>
+<td><strong>Method</strong></td>
+<td>Side-by-side comparison of full response pairs</td>
+<td>Independent blind scoring of individual responses</td>
+</tr>
+<tr>
+<td><strong>Scenarios scored</strong></td>
+<td>All 3</td>
+<td>Scenario 1: 2 reviewers; Scenarios 2-3: 4 reviewers each</td>
+</tr>
+<tr>
+<td><strong>Scoring scale</strong></td>
+<td>1-5 (integer)</td>
+<td>1-5 (half-points permitted)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scoring-criteria">Scoring criteria</h3>
+<table>
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Relevance</strong></td>
+<td>Addresses the specific issue raised</td>
+</tr>
+<tr>
+<td><strong>Groundedness</strong></td>
+<td>Claims are supported by evidence, case studies, or documented
+procedures</td>
+</tr>
+<tr>
+<td><strong>Actionability</strong></td>
+<td>Provides specific, executable steps (not just high-level
+advice)</td>
+</tr>
+<tr>
+<td><strong>Risk Awareness</strong></td>
+<td>Identifies what could go wrong and sets realistic expectations</td>
+</tr>
+<tr>
+<td><strong>Accuracy</strong></td>
+<td>No hallucinated procedures, fake legal citations, or unsupported
+claims</td>
+</tr>
+<tr>
+<td><strong>Trust</strong></td>
+<td>References real examples and proven outcomes to build
+confidence</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes-on-comparability">Notes on comparability</h3>
+<ul>
+<li>The automated evaluator had access to both responses simultaneously;
+human reviewers scored individually.</li>
+<li>Jen’s Scenario 1 feedback was excluded because she received a
+version containing the wrong prompt for Scenario 1A, which she correctly
+identified. Ben did not review Scenario 1.</li>
+<li>The automated evaluator used integer scores only; human reviewers
+used half-point increments, resulting in more granular averages.</li>
+</ul>
+<hr />
+<h2 id="side-by-side-comparison">Side-by-Side Comparison</h2>
+<h3
+id="scenario-1-uk-executive-with-employment-tribunal-press-coverage">Scenario
+1: UK Executive with Employment Tribunal Press Coverage</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: center;">Automated A</th>
+<th style="text-align: center;">Automated B</th>
+<th style="text-align: center;">Automated Delta</th>
+<th style="text-align: center;">Human A (n=2)</th>
+<th style="text-align: center;">Human B (n=2)</th>
+<th style="text-align: center;">Human Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">0.00</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+2</td>
+<td style="text-align: center;">3.50</td>
+<td style="text-align: center;">4.50</td>
+<td style="text-align: center;">+1.00</td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+1</td>
+<td style="text-align: center;">3.50</td>
+<td style="text-align: center;">3.75</td>
+<td style="text-align: center;">+0.25</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+2</td>
+<td style="text-align: center;">3.50</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">+0.50</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+1</td>
+<td style="text-align: center;">3.75</td>
+<td style="text-align: center;">4.25</td>
+<td style="text-align: center;">+0.50</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+2</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">3.50</td>
+<td style="text-align: center;">+0.50</td>
+</tr>
+<tr>
+<td><strong>Mean</strong></td>
+<td style="text-align: center;"><strong>3.7</strong></td>
+<td style="text-align: center;"><strong>5.0</strong></td>
+<td style="text-align: center;"><strong>+1.3</strong></td>
+<td style="text-align: center;"><strong>3.54</strong></td>
+<td style="text-align: center;"><strong>4.00</strong></td>
+<td style="text-align: center;"><strong>+0.46</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="scenario-2-restaurant-chain-facing-food-safety-crisis">Scenario
+2: Restaurant Chain Facing Food Safety Crisis</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: center;">Automated A</th>
+<th style="text-align: center;">Automated B</th>
+<th style="text-align: center;">Automated Delta</th>
+<th style="text-align: center;">Human A (n=4)</th>
+<th style="text-align: center;">Human B (n=4)</th>
+<th style="text-align: center;">Human Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4.75</td>
+<td style="text-align: center;">4.50</td>
+<td style="text-align: center;">-0.25</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+2</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">3.88</td>
+<td style="text-align: center;">+0.88</td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3.75</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">+0.25</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+1</td>
+<td style="text-align: center;">3.75</td>
+<td style="text-align: center;">3.75</td>
+<td style="text-align: center;">0.00</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3.63</td>
+<td style="text-align: center;">4.13</td>
+<td style="text-align: center;">+0.50</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+2</td>
+<td style="text-align: center;">2.50</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">+1.50</td>
+</tr>
+<tr>
+<td><strong>Mean</strong></td>
+<td style="text-align: center;"><strong>4.2</strong></td>
+<td style="text-align: center;"><strong>5.0</strong></td>
+<td style="text-align: center;"><strong>+0.8</strong></td>
+<td style="text-align: center;"><strong>3.56</strong></td>
+<td style="text-align: center;"><strong>4.04</strong></td>
+<td style="text-align: center;"><strong>+0.48</strong></td>
+</tr>
+</tbody>
+</table>
+<h3
+id="scenario-3-company-facing-defamatory-forum-posts-and-negative-reviews">Scenario
+3: Company Facing Defamatory Forum Posts and Negative Reviews</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: center;">Automated A</th>
+<th style="text-align: center;">Automated B</th>
+<th style="text-align: center;">Automated Delta</th>
+<th style="text-align: center;">Human A (n=4)</th>
+<th style="text-align: center;">Human B (n=4)</th>
+<th style="text-align: center;">Human Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4.50</td>
+<td style="text-align: center;">4.50</td>
+<td style="text-align: center;">0.00</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+2</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">4.38</td>
+<td style="text-align: center;">+1.38</td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3.50</td>
+<td style="text-align: center;">4.25</td>
+<td style="text-align: center;">+0.75</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+1</td>
+<td style="text-align: center;">3.50</td>
+<td style="text-align: center;">3.88</td>
+<td style="text-align: center;">+0.38</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3.63</td>
+<td style="text-align: center;">4.13</td>
+<td style="text-align: center;">+0.50</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+2</td>
+<td style="text-align: center;">2.50</td>
+<td style="text-align: center;">4.38</td>
+<td style="text-align: center;">+1.88</td>
+</tr>
+<tr>
+<td><strong>Mean</strong></td>
+<td style="text-align: center;"><strong>4.2</strong></td>
+<td style="text-align: center;"><strong>5.0</strong></td>
+<td style="text-align: center;"><strong>+0.8</strong></td>
+<td style="text-align: center;"><strong>3.44</strong></td>
+<td style="text-align: center;"><strong>4.25</strong></td>
+<td style="text-align: center;"><strong>+0.81</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cross-scenario-averages">Cross-Scenario Averages</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: center;">Automated A</th>
+<th style="text-align: center;">Automated B</th>
+<th style="text-align: center;">Automated Delta</th>
+<th style="text-align: center;">Human A</th>
+<th style="text-align: center;">Human B</th>
+<th style="text-align: center;">Human Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td style="text-align: center;">5.0</td>
+<td style="text-align: center;">5.0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4.45</td>
+<td style="text-align: center;">4.35</td>
+<td style="text-align: center;">-0.10</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td style="text-align: center;">3.0</td>
+<td style="text-align: center;">5.0</td>
+<td style="text-align: center;">+2.0</td>
+<td style="text-align: center;">3.15</td>
+<td style="text-align: center;">4.25</td>
+<td style="text-align: center;">+1.10</td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td style="text-align: center;">4.7</td>
+<td style="text-align: center;">5.0</td>
+<td style="text-align: center;">+0.3</td>
+<td style="text-align: center;">3.58</td>
+<td style="text-align: center;">4.03</td>
+<td style="text-align: center;">+0.45</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td style="text-align: center;">3.7</td>
+<td style="text-align: center;">5.0</td>
+<td style="text-align: center;">+1.3</td>
+<td style="text-align: center;">3.58</td>
+<td style="text-align: center;">3.85</td>
+<td style="text-align: center;">+0.27</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td style="text-align: center;">4.7</td>
+<td style="text-align: center;">5.0</td>
+<td style="text-align: center;">+0.3</td>
+<td style="text-align: center;">3.66</td>
+<td style="text-align: center;">4.16</td>
+<td style="text-align: center;">+0.50</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td style="text-align: center;">3.0</td>
+<td style="text-align: center;">5.0</td>
+<td style="text-align: center;">+2.0</td>
+<td style="text-align: center;">2.65</td>
+<td style="text-align: center;">3.98</td>
+<td style="text-align: center;">+1.33</td>
+</tr>
+<tr>
+<td><strong>Mean</strong></td>
+<td style="text-align: center;"><strong>4.0</strong></td>
+<td style="text-align: center;"><strong>5.0</strong></td>
+<td style="text-align: center;"><strong>+1.0</strong></td>
+<td style="text-align: center;"><strong>3.51</strong></td>
+<td style="text-align: center;"><strong>4.10</strong></td>
+<td style="text-align: center;"><strong>+0.59</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="client-preference">Client Preference</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Automated</th>
+<th>Human</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario 1</td>
+<td>B preferred</td>
+<td>B preferred (2/2)</td>
+</tr>
+<tr>
+<td>Scenario 2</td>
+<td>B preferred</td>
+<td>B preferred (4/4)</td>
+</tr>
+<tr>
+<td>Scenario 3</td>
+<td>B preferred</td>
+<td>B preferred (4/4)</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>3/3 (100%)</strong></td>
+<td><strong>10/10 (100%)</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-1-automated-evaluation">Part 1: Automated Evaluation</h2>
+<h3 id="scoring-summary">Scoring Summary</h3>
+<h4
+id="scenario-1-uk-executive-with-employment-tribunal-press-coverage-1">Scenario
+1: UK Executive with Employment Tribunal Press Coverage</h4>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: center;">Prompt A (Baseline)</th>
+<th style="text-align: center;">Prompt B (Assisted)</th>
+<th style="text-align: center;">Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>+2</strong></td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+1</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>+2</strong></td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+1</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>+2</strong></td>
+</tr>
+<tr>
+<td><strong>Average</strong></td>
+<td style="text-align: center;"><strong>3.7</strong></td>
+<td style="text-align: center;"><strong>5.0</strong></td>
+<td style="text-align: center;"><strong>+1.3</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="scenario-2-restaurant-chain-food-safety-crisis">Scenario 2:
+Restaurant Chain Food Safety Crisis</h4>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: center;">Prompt A (Baseline)</th>
+<th style="text-align: center;">Prompt B (Assisted)</th>
+<th style="text-align: center;">Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>+2</strong></td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+1</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>+2</strong></td>
+</tr>
+<tr>
+<td><strong>Average</strong></td>
+<td style="text-align: center;"><strong>4.2</strong></td>
+<td style="text-align: center;"><strong>5.0</strong></td>
+<td style="text-align: center;"><strong>+0.8</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="scenario-3-debt-collection-company-forumreview-issues">Scenario
+3: Debt Collection Company Forum/Review Issues</h4>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: center;">Prompt A (Baseline)</th>
+<th style="text-align: center;">Prompt B (Assisted)</th>
+<th style="text-align: center;">Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>+2</strong></td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">+1</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>+2</strong></td>
+</tr>
+<tr>
+<td><strong>Average</strong></td>
+<td style="text-align: center;"><strong>4.2</strong></td>
+<td style="text-align: center;"><strong>5.0</strong></td>
+<td style="text-align: center;"><strong>+0.8</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="detailed-analysis">Detailed Analysis</h3>
+<h4 id="scenario-1">Scenario 1</h4>
+<p><strong>Groundedness (+2):</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 28%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr>
+<th>Evidence Type</th>
+<th>Prompt A</th>
+<th>Prompt B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Case study citations</td>
+<td>None</td>
+<td>CS02 cited 15+ times with specific metrics (16 articles, 20 images,
+13/20 negative start, 4-month timeline)</td>
+</tr>
+<tr>
+<td>RTBF success rates</td>
+<td>No statistics</td>
+<td>~29% overall, lower for news sites — sourced from [H01]</td>
+</tr>
+<tr>
+<td>Image removal precedent</td>
+<td>Called it “highest ROI” with no evidence</td>
+<td>Cited CS02’s 20/20 image removal as proof</td>
+</tr>
+<tr>
+<td>Timeline basis</td>
+<td>Generic 12-18 month estimate</td>
+<td>4-month benchmark from CS02 with caveats</td>
+</tr>
+<tr>
+<td>Document citations</td>
+<td>External URLs only</td>
+<td>Bracketed [CS02], [H01], [H02], [A01], [S01], [H08] throughout</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Actionability (+1):</strong> Both provided strong templates
+(RTBF, publisher letters, IPSO complaints, image removal). Key
+difference: Prompt B included an RTBF appeal/resubmission template from
+[H02], while Prompt A had no rejection recovery strategy. Prompt B also
+referenced submitting via personal email rather than agent email to
+improve success rates [H02].</p>
+<p><strong>Risk Awareness (+2):</strong></p>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 30%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Risk Factor</th>
+<th>Prompt A</th>
+<th>Prompt B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Streisand effect</td>
+<td>Not mentioned</td>
+<td>Explicitly warned, citing [S01] and [A01]</td>
+</tr>
+<tr>
+<td>RTBF territorial limits</td>
+<td>Not mentioned</td>
+<td>Cited Google v CNIL — delisting not worldwide</td>
+</tr>
+<tr>
+<td>Journalism exemptions</td>
+<td>Covered</td>
+<td>Covered with more nuance</td>
+</tr>
+<tr>
+<td>Realistic expectations</td>
+<td>“Total disappearance is not”</td>
+<td>“I would not promise total deletion” — backed by CS02 evidence</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trust (+2):</strong> Prompt A reads as competent generic
+advice. Prompt B reads as advice from a firm that has done this exact
+thing before — CS02 is cited as a directly analogous case with verified
+outcomes, the “weekly drumbeat” execution model is credited from the
+client testimonial, and every recommendation links to either internal
+evidence or external legal authority.</p>
+<p><strong>IPSO Test (H08 organic surfacing):</strong> Prompt A
+mentioned IPSO in passing (1 paragraph). Prompt B produced a full
+section with per-outlet breakdowns (Daily Mail = IPSO, BBC = own
+framework, Guardian = readers’ editor route), specific Editors’ Code
+clauses, a complaint template, and caveats about IPSO’s limitations. The
+H08 addition worked as intended.</p>
+<h4 id="scenario-2">Scenario 2</h4>
+<p><strong>Groundedness (+2):</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 28%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr>
+<th>Evidence Type</th>
+<th>Prompt A</th>
+<th>Prompt B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Crisis case study</td>
+<td>None — relied on CDC CERC framework (generic)</td>
+<td>CS11 (Coral Sea food poisoning) cited throughout with recovery
+metrics</td>
+</tr>
+<tr>
+<td>Social media recovery data</td>
+<td>No metrics</td>
+<td>Facebook +352.5%, Twitter +345%, YouTube +95.9%, Instagram +383.3%
+from [CS11]</td>
+</tr>
+<tr>
+<td>Review recovery precedent</td>
+<td>Good Trustpilot guidance but no benchmark</td>
+<td>CS04 cited: Trustpilot 5.4 to 7.0, reviews +127%, response rate
++121%</td>
+</tr>
+<tr>
+<td>Crisis activation model</td>
+<td>Self-constructed command cell</td>
+<td>[H15] three-tier severity model, single-spokesperson chain, named
+role assignments</td>
+</tr>
+<tr>
+<td>Holding statement</td>
+<td>Well-crafted (original)</td>
+<td>Adapted from [H16] documented template structure</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Actionability (0 — both scored 5):</strong> This was the
+scenario where the baseline performed best. Prompt A’s response was
+exceptionally detailed: hour-by-hour breakdown, 8 social media response
+templates, a 30-day phased plan, and a granular action checklist. Prompt
+B matched this quality but grounded it in documented procedures. The key
+difference is not what to do but why the client should believe it will
+work.</p>
+<p><strong>Trust (+2):</strong></p>
+<table>
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 29%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr>
+<th>Trust Signal</th>
+<th>Prompt A</th>
+<th>Prompt B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“This has been done before”</td>
+<td>No precedent cited</td>
+<td>Coral Sea cited as directly comparable food poisoning crisis</td>
+</tr>
+<tr>
+<td>Recovery metrics</td>
+<td>No data on recovery outcomes</td>
+<td>CS11 social growth metrics, CS04 Trustpilot metrics</td>
+</tr>
+<tr>
+<td>Complaint interception</td>
+<td>Not mentioned</td>
+<td>CS04’s customer portal approach for intercepting complaints before
+they become reviews</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notable:</strong> Scenario 2 baseline was the highest-quality
+baseline response across all three scenarios. The archive context still
+improved groundedness and trust, but the delta was smaller than
+Scenarios 1 and 3.</p>
+<h4 id="scenario-3">Scenario 3</h4>
+<p><strong>Groundedness (+2):</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 28%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr>
+<th>Evidence Type</th>
+<th>Prompt A</th>
+<th>Prompt B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comparable case study</td>
+<td>None</td>
+<td>CS07 cited throughout: 45% to 20% negative reduction, media in The
+Times/Reuters/Yahoo Finance</td>
+</tr>
+<tr>
+<td>Forum escalation process</td>
+<td>Self-constructed 5-step ladder</td>
+<td>Explicitly followed [H04] 5-step escalation, citing response time
+(2-4 hours), director/senior manager requirement</td>
+</tr>
+<tr>
+<td>Consumer Action Group assessment</td>
+<td>Correctly identified their rules about defamatory content</td>
+<td>Added [H04] warning: “very unlikely to remove content except for
+clear, provable defamation”</td>
+</tr>
+<tr>
+<td>Review generation approach</td>
+<td>Good principles</td>
+<td>Grounded in [H26] with specific KPIs (100% response rate, 4-hour
+SLA)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risk Awareness (+1):</strong></p>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 30%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Risk Factor</th>
+<th>Prompt A</th>
+<th>Prompt B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consumer Action Group resistance</td>
+<td>Identified rules but rated them “Medium-High” for removal</td>
+<td>Rated more conservatively, citing [H04]: “very unlikely to remove
+except for clear defamation”</td>
+</tr>
+<tr>
+<td>RTBF for companies</td>
+<td>Not mentioned</td>
+<td>Correctly noted ICO delisting criteria are primarily for natural
+persons, not corporate entities</td>
+</tr>
+<tr>
+<td>Structural industry negativity</td>
+<td>Acknowledged</td>
+<td>Same + CS07 precedent: even with full programme, 20% negative
+remained</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trust (+2):</strong> The most significant trust difference
+was expectation-setting. Prompt A estimated “remove 2-4, suppress 2-4” —
+reasonable but unsupported. Prompt B cited CS07: “a similar regulated
+credit-management business reduced negative Page 1-2 share from 45% to
+20%.” Evidence-based honesty is more trustworthy than an estimate, even
+when both say roughly the same thing.</p>
+<h3 id="hallucination-analysis">Hallucination Analysis</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th style="text-align: center;">Prompt A</th>
+<th style="text-align: center;">Prompt B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">0 detected</td>
+<td style="text-align: center;">0 detected</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">0 detected</td>
+<td style="text-align: center;">0 detected</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">0 detected</td>
+<td style="text-align: center;">0 detected</td>
+</tr>
+</tbody>
+</table>
+<p>Neither version hallucinated legal citations, case details, or
+procedures. The archive context did not introduce any false claims.</p>
+<h3 id="context-utilisation">Context Utilisation</h3>
+<h4 id="most-impactful-documents">Most impactful documents</h4>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 39%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>Document</th>
+<th>Scenario</th>
+<th style="text-align: center;">Times Referenced</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CS02 (UK C-Suite tribunal)</td>
+<td>1</td>
+<td style="text-align: center;">15+</td>
+<td>High — directly analogous case anchored the entire response</td>
+</tr>
+<tr>
+<td>CS11 (Coral Sea crisis)</td>
+<td>2</td>
+<td style="text-align: center;">10+</td>
+<td>High — recovery metrics used as evidence throughout</td>
+</tr>
+<tr>
+<td>CS07 (Credit management company)</td>
+<td>3</td>
+<td style="text-align: center;">10+</td>
+<td>High — expectation-setting and suppression strategy</td>
+</tr>
+<tr>
+<td>H04 (Forum removal escalation)</td>
+<td>3</td>
+<td style="text-align: center;">8+</td>
+<td>High — structured the entire removal approach</td>
+</tr>
+<tr>
+<td>H01 (RTBF request)</td>
+<td>1</td>
+<td style="text-align: center;">6+</td>
+<td>Medium — form URL and success rates</td>
+</tr>
+<tr>
+<td>H16 (Holding statement)</td>
+<td>2</td>
+<td style="text-align: center;">5+</td>
+<td>Medium — template structure adapted</td>
+</tr>
+<tr>
+<td>CS04 (Symphony Group reviews)</td>
+<td>2</td>
+<td style="text-align: center;">5+</td>
+<td>Medium — Trustpilot recovery metrics</td>
+</tr>
+<tr>
+<td>H17 (Social media crisis)</td>
+<td>2</td>
+<td style="text-align: center;">5+</td>
+<td>Medium — out-produce principle</td>
+</tr>
+<tr>
+<td>H02 (RTBF appeal)</td>
+<td>1</td>
+<td style="text-align: center;">4+</td>
+<td>Medium — appeal strategy</td>
+</tr>
+<tr>
+<td>H15 (Crisis activation)</td>
+<td>2</td>
+<td style="text-align: center;">4+</td>
+<td>Medium — severity tiers</td>
+</tr>
+<tr>
+<td>H08 (News archive removal)</td>
+<td>1</td>
+<td style="text-align: center;">3+</td>
+<td>Medium — IPSO route surfaced organically</td>
+</tr>
+<tr>
+<td>H22 (Guest posting)</td>
+<td>3</td>
+<td style="text-align: center;">3+</td>
+<td>Low-Medium — content volume targets</td>
+</tr>
+<tr>
+<td>H26 (Review generation)</td>
+<td>3</td>
+<td style="text-align: center;">3+</td>
+<td>Low-Medium — KPIs and response SLA</td>
+</tr>
+<tr>
+<td>S01, S07, S10 (Scenarios)</td>
+<td>1, 2, 3</td>
+<td style="text-align: center;">2+ each</td>
+<td>Low — phasing and risk warnings</td>
+</tr>
+<tr>
+<td>A01 (Removal decision tree)</td>
+<td>1, 3</td>
+<td style="text-align: center;">2+ each</td>
+<td>Low — hierarchy reference</td>
+</tr>
+</tbody>
+</table>
+<h4 id="most-impactful-document-types">Most impactful document
+types</h4>
+<ol type="1">
+<li><strong>Case studies (CS)</strong> — by far the most impactful;
+provided the metrics, timelines, and “this has been done before”
+evidence that drove trust and groundedness improvements.</li>
+<li><strong>How-to guides (H)</strong> — provided procedural specifics
+(RTBF form URLs, escalation steps, response times) that improved
+actionability and accuracy.</li>
+<li><strong>Scenarios (S)</strong> — least impactful; they mainly
+reinforced phasing and risk warnings the model often generated
+independently.</li>
+<li><strong>Actions (A)</strong> — provided decision-tree framing but
+the model often constructed similar hierarchies on its own.</li>
+</ol>
+<h3 id="automated-evaluation-recommendations">Automated Evaluation
+Recommendations</h3>
+<p><strong>For retrieval:</strong> Prioritise case studies, then how-to
+guides. Scenarios and actions are lower priority.</p>
+<p><strong>For prompts:</strong> The bracket citation instruction worked
+well. The “combine with external sources” instruction produced credible
+blended outputs.</p>
+<p><strong>For evaluation:</strong> Groundedness and trust are the key
+differentiators and should be weighted more heavily. Actionability has a
+ceiling effect with strong baseline models.</p>
+<hr />
+<h2 id="part-2-human-evaluation">Part 2: Human Evaluation</h2>
+<h3 id="average-scores-by-scenario">Average Scores by Scenario</h3>
+<h4
+id="scenario-1-uk-executive-with-employment-tribunal-press-coverage-n2">Scenario
+1: UK Executive with Employment Tribunal Press Coverage (n=2)</h4>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Prompt A</th>
+<th>Prompt B</th>
+<th>Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td>4.00</td>
+<td>4.00</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td>3.50</td>
+<td>4.50</td>
+<td>+1.00</td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td>3.50</td>
+<td>3.75</td>
+<td>+0.25</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td>3.50</td>
+<td>4.00</td>
+<td>+0.50</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>3.75</td>
+<td>4.25</td>
+<td>+0.50</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td>3.00</td>
+<td>3.50</td>
+<td>+0.50</td>
+</tr>
+<tr>
+<td><strong>Mean</strong></td>
+<td><strong>3.54</strong></td>
+<td><strong>4.00</strong></td>
+<td><strong>+0.46</strong></td>
+</tr>
+</tbody>
+</table>
+<h4
+id="scenario-2-restaurant-chain-facing-food-safety-crisis-n4">Scenario
+2: Restaurant Chain Facing Food Safety Crisis (n=4)</h4>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Prompt A</th>
+<th>Prompt B</th>
+<th>Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td>4.75</td>
+<td>4.50</td>
+<td>-0.25</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td>3.00</td>
+<td>3.88</td>
+<td>+0.88</td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td>3.75</td>
+<td>4.00</td>
+<td>+0.25</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td>3.75</td>
+<td>3.75</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>3.63</td>
+<td>4.13</td>
+<td>+0.50</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td>2.50</td>
+<td>4.00</td>
+<td>+1.50</td>
+</tr>
+<tr>
+<td><strong>Mean</strong></td>
+<td><strong>3.56</strong></td>
+<td><strong>4.04</strong></td>
+<td><strong>+0.48</strong></td>
+</tr>
+</tbody>
+</table>
+<h4
+id="scenario-3-company-facing-defamatory-forum-posts-and-negative-reviews-n4">Scenario
+3: Company Facing Defamatory Forum Posts and Negative Reviews (n=4)</h4>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Prompt A</th>
+<th>Prompt B</th>
+<th>Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td>4.50</td>
+<td>4.50</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td>3.00</td>
+<td>4.38</td>
+<td>+1.38</td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td>3.50</td>
+<td>4.25</td>
+<td>+0.75</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td>3.50</td>
+<td>3.88</td>
+<td>+0.38</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>3.63</td>
+<td>4.13</td>
+<td>+0.50</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td>2.50</td>
+<td>4.38</td>
+<td>+1.88</td>
+</tr>
+<tr>
+<td><strong>Mean</strong></td>
+<td><strong>3.44</strong></td>
+<td><strong>4.25</strong></td>
+<td><strong>+0.81</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="individual-scores">Individual Scores</h3>
+<h4 id="scenario-1-n2">Scenario 1 (n=2)</h4>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Andrew A</th>
+<th>Andrew B</th>
+<th>Charlie A</th>
+<th>Charlie B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>4</td>
+<td>5</td>
+<td>3.5</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td>3</td>
+<td>5</td>
+<td>3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="scenario-2-n4">Scenario 2 (n=4)</h4>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Andrew A</th>
+<th>Andrew B</th>
+<th>Ben A</th>
+<th>Ben B</th>
+<th>Charlie A</th>
+<th>Charlie B</th>
+<th>Jen A</th>
+<th>Jen B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>4.5</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3.5</td>
+<td>4.5</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td>3</td>
+<td>5</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>5</td>
+<td>3</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h4 id="scenario-3-n4">Scenario 3 (n=4)</h4>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Andrew A</th>
+<th>Andrew B</th>
+<th>Ben A</th>
+<th>Ben B</th>
+<th>Charlie A</th>
+<th>Charlie B</th>
+<th>Jen A</th>
+<th>Jen B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Groundedness</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>4.5</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Actionability</td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Risk Awareness</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+<td>2.5</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3.5</td>
+<td>4.5</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td>3</td>
+<td>5</td>
+<td>2</td>
+<td>3</td>
+<td>2</td>
+<td>4.5</td>
+<td>3</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consolidated-feedback-by-scenario">Consolidated Feedback by
+Scenario</h3>
+<h4 id="scenario-1-1">Scenario 1</h4>
+<p><strong>Where Prompt B improved over A:</strong> - Groundedness was
+the clearest gain (+1.0): Prompt B’s use of the CS02 case study gave
+reviewers concrete evidence that Prompt A lacked. Andrew noted Prompt A
+had “no proprietary data or case validation.” - Risk Awareness and
+Accuracy both improved (+0.5 each): internal guidance reinforced
+realistic constraints and correct procedural application.</p>
+<p><strong>Where Prompt B drew mixed reactions:</strong> - Trust scored
+lower for Charlie (2 vs 3) despite scoring higher for Andrew (5 vs 3).
+Charlie flagged a formatting error — Prompt B has Workstream 1/2/4 but
+no 3 — noting “a simple mistake like this can discredit the response
+quite a bit; not as presentable to a client.” - Actionability was split:
+Andrew scored B higher (4 vs 3), but Charlie scored it lower (3.5 vs
+4).</p>
+<p><strong>Notable comments:</strong> - Charlie: “To answer directly
+‘Which answer would you actually use to advise a client?’ then it would
+be prompt B. However that is because when advising I could hide some of
+the issues, and augment it with my own expertise. However if I was to
+deliver the answer verbatim to a client, or if I was an average user of
+the LLM and reading the answer directly, I would feel better about
+prompt A.” - Charlie: Prompt B’s priority bucketing of results (quick
+wins vs longer-term goals) was a positive feature not present in A.</p>
+<h4 id="scenario-2-1">Scenario 2</h4>
+<p><strong>Where Prompt B improved over A:</strong> - Trust saw the
+largest gain (+1.50) — the biggest single human-scored improvement
+across all scenarios. Prompt B’s references to CS11 and CS04 gave it
+concrete proof points. - Groundedness improved (+0.88) through case
+study references and internal playbook citations.</p>
+<p><strong>Where Prompt B did not clearly improve:</strong> - Risk
+Awareness was unchanged on average (3.75). Charlie noted both prompts
+“state what not to do, but don’t delve into what will go wrong if the
+incorrect steps are taken.” - Ben scored both prompts identically across
+all criteria, finding the differences minimal.</p>
+<p><strong>Notable comments:</strong> - Charlie on Trust for Prompt A:
+“I’ve gone for 2 because it references CDC/CERC and gov websites, and it
+reads as trustworthy. However, based off of your definition for Trust
+(References real examples and proven outcomes to build confidence) I
+can’t go higher. Even a section at the bottom ‘Previous examples of this
+strategy in action’ displaying case studies and the results would
+improve this score immensely.” - Charlie on Prompt B Groundedness: “Put
+5 here because of the extensive referencing to case studies. To caveat
+it though; we have supplied the case studies here? Is the end goal that
+a user could get that type of response without having to supply case
+studies they have found themselves?” - Charlie: “Prompt A got a better
+response in terms of readability and ease of being able to follow it.” -
+Ben: Prices seem high for our agency. Both prompts could do with advice
+on generating positive reviews as a counter strategy. - Jen: “Both are
+good options honestly. A does a good job, but B feels more structured
+perhaps. The difference isn’t huge though.”</p>
+<h4 id="scenario-3-1">Scenario 3</h4>
+<p><strong>Where Prompt B improved over A:</strong> - Trust saw the
+largest gain (+1.88) — the biggest single improvement in the entire
+human evaluation. The CS07 case study and H04 escalation procedures gave
+reviewers confidence. - Groundedness improved strongly (+1.38) through
+case study metrics and procedural guide citations. - Actionability
+improved (+0.75) with clearer execution roadmaps grounded in proven
+methods.</p>
+<p><strong>Notable comments:</strong> - Charlie: “Prompt B was a much
+better response, but it could still be improved on. I would have liked
+to have seen a more detailed and fleshed out section, with clearer
+actionable steps for the positive content creation plan. I also don’t
+feel like there was much on risk awareness.” - Ben: Missing specific
+publications or profile suggestions. - Jen: “A is definitely usable, but
+B feels more complete so would be my choice overall.”</p>
+<h3 id="key-themes-from-human-evaluators">Key Themes from Human
+Evaluators</h3>
+<ol type="1">
+<li><p><strong>Trust and Groundedness are the strongest
+differentiators.</strong> The two criteria with the largest average
+improvements were Trust (+1.33) and Groundedness (+1.10). Every reviewer
+consistently scored Prompt A low on these due to the absence of case
+studies and proven outcomes.</p></li>
+<li><p><strong>Relevance is already strong in baseline prompts.</strong>
+Relevance was the highest-scoring Prompt A criterion (4.45 average) and
+saw no meaningful improvement in Prompt B. The model addresses the right
+issues regardless of context.</p></li>
+<li><p><strong>Risk Awareness is the weakest criterion for both
+prompts.</strong> It showed the smallest improvement (+0.27) and was
+flagged by multiple reviewers as underperforming. Charlie noted
+responses “state what not to do, but don’t delve into what will go
+wrong.”</p></li>
+<li><p><strong>Readability vs substance trade-off.</strong> Charlie
+observed that Prompt A tended to be more readable, while Prompt B had
+better substance but occasionally suffered from formatting errors that
+could undermine credibility if delivered directly to a client.</p></li>
+<li><p><strong>Actionability needs more step-by-step detail.</strong>
+Multiple reviewers (Ben, Charlie) noted both prompts could be more
+specific. Charlie commented that scoring 5/5 would require responses to
+“really spell it out for people and take them through every
+process.”</p></li>
+<li><p><strong>Budget figures need grounding.</strong> Ben flagged
+budgets as high for a typical agency. Charlie noted prices listed
+“without sources.”</p></li>
+<li><p><strong>Scalability of the RAG approach.</strong> Charlie raised
+a strategic question: “We have supplied the case studies here. Is the
+end goal that a user could get that type of response without having to
+supply case studies they have found themselves?”</p></li>
+</ol>
+<hr />
+<h2 id="part-3-combined-findings">Part 3: Combined Findings</h2>
+<h3 id="where-both-evaluations-agree">Where both evaluations agree</h3>
+<ol type="1">
+<li><p><strong>Prompt B is consistently preferred.</strong> Both the
+automated evaluator (3/3) and all human reviewers (10/10 individual
+preferences) chose the archive-assisted response in every
+scenario.</p></li>
+<li><p><strong>Groundedness and Trust are the primary value
+drivers.</strong> Both evaluations identified these as the criteria
+where archive context makes the most difference. The automated
+evaluation measured +2.0 on both; human reviewers measured +1.10
+(Groundedness) and +1.33 (Trust). The direction is identical — case
+studies and documented outcomes are the core value of the RAG
+approach.</p></li>
+<li><p><strong>Relevance is unaffected by context.</strong> Both
+evaluations agree the model understands the scenario equally well with
+or without archive documents. Automated delta: 0; human delta:
+-0.10.</p></li>
+<li><p><strong>Case studies are the most impactful document
+type.</strong> The automated context utilisation analysis showed case
+studies (CS02, CS11, CS07) were cited 10-15+ times each and drove the
+largest quality improvements. Human reviewers independently confirmed
+this — every positive comment about Prompt B referenced case study
+evidence.</p></li>
+<li><p><strong>Scenario 2 (crisis) had the strongest baseline.</strong>
+Both evaluations noted this was where Prompt A performed best, with the
+automated evaluation calling it “the highest-quality baseline response”
+and Jen commenting “the difference isn’t huge.”</p></li>
+</ol>
+<h3 id="where-the-evaluations-diverge">Where the evaluations
+diverge</h3>
+<ol type="1">
+<li><p><strong>Magnitude of improvement.</strong> The automated
+evaluator measured larger deltas across the board (overall: +1.0
+automated vs +0.59 human). The automated evaluator gave Prompt B a
+perfect 5.0 across all scenarios; human reviewers were more
+conservative, with Prompt B averaging 4.10. This suggests the automated
+evaluator has a ceiling effect — once evidence is present, it scores 5 —
+while human reviewers apply more nuanced judgement about whether that
+evidence is well-presented.</p></li>
+<li><p><strong>Risk Awareness.</strong> The automated evaluator scored
+this as a strong improvement (+1.3 average). Human reviewers found
+minimal improvement (+0.27). This is the largest disagreement between
+the two methods. Human reviewers specifically wanted responses to
+explain what goes wrong if steps are missed, not just what to avoid — a
+nuance the automated evaluator did not penalise for.</p></li>
+<li><p><strong>Actionability.</strong> The automated evaluator scored
+both prompts near-perfect on actionability (4.7 A, 5.0 B). Human
+reviewers were materially lower (3.58 A, 4.03 B) and specifically asked
+for more granular step-by-step guidance, named publications, and
+platform-specific detail. Human practitioners have a higher bar for
+“actionable” than an LLM evaluator.</p></li>
+<li><p><strong>Presentation quality matters to humans.</strong>
+Charlie’s observation about Prompt B’s missing Workstream 3 numbering —
+which reduced his Trust score from what would otherwise have been higher
+— illustrates something the automated evaluator did not catch.
+Formatting errors, readability, and client-presentation polish are
+factors that human reviewers weigh but automated evaluation
+misses.</p></li>
+<li><p><strong>Budget realism.</strong> Ben flagged budgets as too high
+for their agency. The automated evaluator did not assess budget figures
+against real-world agency pricing. This is a domain-specific judgement
+that only practitioners can make.</p></li>
+</ol>
+<h3 id="synthesised-conclusions">Synthesised Conclusions</h3>
+<ol type="1">
+<li><p><strong>The archive-assisted approach works.</strong> Both
+evaluation methods independently confirm that providing relevant
+internal documents — particularly case studies — materially improves
+response quality. The effect is strongest on Trust and Groundedness,
+which are the criteria most relevant to client-facing advisory
+work.</p></li>
+<li><p><strong>The automated evaluation overestimates
+improvement.</strong> It is useful for directional validation (does B
+beat A?) but its scores are systematically higher than human expert
+scores, particularly for Prompt B. Automated evaluation should be
+treated as a screening tool, not a final measure of quality.</p></li>
+<li><p><strong>Human evaluation surfaces practical concerns that
+automated evaluation misses.</strong> Formatting errors, readability
+trade-offs, budget realism, and the “could I hand this to a client
+verbatim?” test are all dimensions that only human reviewers flagged.
+These are critical for a production system.</p></li>
+<li><p><strong>The baseline model is already strong.</strong> GPT 5.3
+Thinking produces competent, legally sound, well-structured advice
+without any context. The archive doesn’t fix a broken baseline — it
+elevates a good response into one that carries institutional
+credibility. This means the RAG system is proving value against a high
+bar.</p></li>
+<li><p><strong>Areas for improvement remain in both prompts.</strong>
+Risk Awareness (explaining consequences, not just dos/don’ts),
+Actionability (more granular step-by-step detail), and budget grounding
+are areas where neither prompt version fully satisfies expert
+expectations. These represent opportunities for prompt engineering or
+additional context documents.</p></li>
+<li><p><strong>The scalability question is real.</strong> Charlie’s
+question about whether users will need to supply their own case studies
+highlights the core product question for this PoC: the value is proven
+when context is provided — the next step is automating that
+retrieval.</p></li>
+</ol>
+<h3 id="decision">Decision</h3>
+<p><strong>Result: POSITIVE — proceed to automated
+retrieval.</strong></p>
+<p>Both evaluation methods confirm the archive-assisted approach
+delivers material improvement across the criteria that matter most for
+client advisory work. The manual RAG simulation has validated the value
+of the archive data. The recommended next step is to build the retrieval
+system so that relevant case studies and procedural guides are surfaced
+automatically, without requiring users to manually select and attach
+documents.</p>
+</body>
+</html>
