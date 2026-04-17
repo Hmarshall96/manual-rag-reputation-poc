@@ -1,0 +1,12 @@
+Scenario 1
+A: Relevance 2/Groundedness 2/Actionability 3/Risk 3/Accuracy 2/Trust 1)
+B: Relevance 5 / Groundedness 5 / Actionability 4 / Risk 4 / Accuracy 5 / Trust 5
+A isn’t really usable in this case as it answers a different scenario? So B would be my go-to. A note that it would still need be slightly more detailed in places (e.g. templates an platform specifics)
+Scenario 2
+A: Relevance 5 / Groundedness 3 / Actionability 4 / Risk 4 / Accuracy 4 / Trust 3
+B: Relevance 5 / Groundedness 4 / Actionability 4 / Risk 5 / Accuracy 5 / Trust 4
+Both are good options honestly. A does a good job, but B feels more structured perhaps? The difference isn’t huge though.
+Scenario 3
+A: Relevance 5 / Groundedness 3 / Actionability 4 / Risk 4 / Accuracy 4 / Trust 3
+B: Relevance 5 / Groundedness 5 / Actionability 4 / Risk 5 / Accuracy 5 / Trust 5
+A is definitely usable, but B feels more complete so would be my choice overall. 
